@@ -163,12 +163,18 @@ android {
     buildTypes {
         debug {
             signingConfig signingConfigs.debug
+            resValue "string", "CodePushDeploymentKey", '""'
+        }
+        releaseStaging {
+          matchingFallbacks = ['release']
+          resValue "string", "CodePushDeploymentKey", '"vei__eoo3p3ZpAA3coi8cx7a0FeU6si3z2FVe"'
         }
         release {
             // Comentar a linha abaixo para funcionar o build no Appcenter
             // signingConfig signingConfigs.release
             minifyEnabled enableProguardInReleaseBuilds
             proguardFiles getDefaultProguardFile("proguard-android.txt"), "proguard-rules.pro"
+            resValue "string", "CodePushDeploymentKey", '"E7f1SwSsc_-wJYmkgeHSCWOtSTOyVAhFlh8ra"'
         }
     }
 
