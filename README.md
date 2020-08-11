@@ -7,7 +7,7 @@
 * Create appointments
 
 **API**, click here: [GoBarber API](https://github.com/Gabriel-Agrelli/gobarber_backend)<br />
-**Web**, click here: [GoBarber Mobile](https://github.com/Gabriel-Agrelli/gobarber_frontend)
+**Web**, click here: [GoBarber Web](https://github.com/Gabriel-Agrelli/gobarber_frontend)
 
 ## Techs
 
