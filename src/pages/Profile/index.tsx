@@ -13,7 +13,7 @@ import Input from '../../components/Input';
 import Button from '../../components/Button';
 import { useAuth } from '../../hooks/auth';
 
-import { Container, BackButton, Title, UserAvatarButton, UserAvatar } from './styles';
+import { Container, BackButton, Title, UserAvatarButton, UserAvatar, SignOutButton } from './styles';
 
 interface ProfileFormData {
   name: string;
@@ -24,7 +24,8 @@ interface ProfileFormData {
 }
 
 const Profile: React.FC = () => {
-  const { user, updateUser } = useAuth();
+  const { user, updateUser, signOut } = useAuth();
+
   const formRef = useRef<FormHandles>(null);
   const emailInputRef = useRef<TextInput>(null);
   const oldPasswordInputRef = useRef<TextInput>(null);
@@ -224,6 +225,8 @@ const Profile: React.FC = () => {
                 Confirmar mudanças
               </Button>
             </Form>
+
+            <SignOutButton onPress={signOut}>Sair</SignOutButton>
           </Container>
         </ScrollView>
       </KeyboardAvoidingView>

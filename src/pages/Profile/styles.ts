@@ -1,5 +1,6 @@
 import styled from 'styled-components/native';
 import { Platform } from 'react-native';
+import Button from '../../components/Button';
 
 export const Container = styled.View`
   flex: 1;
@@ -28,3 +29,10 @@ export const UserAvatar = styled.Image`
   border-radius: 98px;
   align-self: center;
 `;
+
+export const SignOutButton = styled(Button)`
+  margin-top: 32px;
+  background-color: #de2846;
+`;
+
+export const SignOutButtonText = styled.Text``;
